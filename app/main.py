@@ -1,6 +1,5 @@
 from fastapi import FastAPI
-from app.routes.analyze import router as analyze_router
-
+from app.routes import analyze, recommend, sentiment
 
 app = FastAPI()
 
@@ -8,7 +7,9 @@ app = FastAPI()
 async def root():
     return {"message": "Welcome to the Stock Market RAG API"}
 
-app.include_router(analyze_router, prefix="/analyze")
+app.include_router(analyze.router, prefix="/analyze")
+app.include_router(recommend.router, prefix="/recommend")
+app.include_router(sentiment.router, prefix="/sentiment")
 
 if __name__ == "__main__":
     import uvicorn

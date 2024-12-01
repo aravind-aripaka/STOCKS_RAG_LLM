@@ -12,3 +12,10 @@ async def get_stock_data(symbol: str):
 async def test_llm(query: str = "Explain stock trends"):
     response = generate_response(query)
     return {"query": query, "response": response}
+
+@router.get("/analyze")
+def analyze_stock(symbol: str):
+    data = fetch_stock_data(symbol)
+    if not data:
+        return {"error": "Failed to fetch stock data"}
+    return {"stock_data": data}
