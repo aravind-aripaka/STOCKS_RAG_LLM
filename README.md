@@ -41,13 +41,3 @@ _Vector Databases:_ Pinecone, FAISS, Elasticsearch
 
 
 **  User -> UI (Frontend) -> Backend (API Layer) -> Retrieval System -> Vector DB & APIs -> LLM**
-
-  
-# STOCKS_RAG_LLM
-# STOCKS_RAG_LLM
-# STOCKS_RAG_LLM
-# stocks_rag_llm
-# stocks_rag_llm
-# stocks_rag_llm
-# stocks_rag_llm
-# stocks_rag_llm
